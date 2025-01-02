@@ -40,7 +40,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build -- --base-href=https://$GITHUB_REPOSITORY_OWNER.github.io/${{ github.repository_id }}/
+        run: npm run build -- --base-href=https://$GITHUB_REPOSITORY_OWNER.github.io/${{ github.event.repository.name }}/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

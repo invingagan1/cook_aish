@@ -1,0 +1,23 @@
+@use "@angular/material" as mat;
+:host {
+  padding: 1rem;
+  display: block;
+}
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+mat-card{
+  box-shadow: var(--mat-sys-level0) 
+}
+mat-card-title {
+  font: var(--mat-sys-display-large);
+}
+mat-card-content {
+  p {
+    font: var(--mat-sys-headline-medium);
+  }
+}

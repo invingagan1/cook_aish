@@ -43,8 +43,13 @@ jobs:
       - name: Build
         run: npm run build -- --base-href=/${{ github.event.repository.name }}/
 
+      - name: Create 404 from index.html
+        run: cp dist/cook_aish/browser/index.html dist/cook_aish/browser/404.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
